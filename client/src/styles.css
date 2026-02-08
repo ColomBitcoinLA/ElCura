@@ -1,0 +1,82 @@
+:root {
+  color-scheme: light;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  background: radial-gradient(circle at top, #f7efe5 0%, #efe3d5 55%, #dbc7b1 100%);
+  color: #2b1b12;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+.reader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem 1.5rem;
+}
+
+.reader__header {
+  text-align: center;
+  max-width: 620px;
+}
+
+.reader__header h1 {
+  font-size: clamp(2rem, 3vw, 3rem);
+  margin-bottom: 0.4rem;
+}
+
+.reader__header p {
+  margin: 0;
+  opacity: 0.8;
+}
+
+.reader__book {
+  padding: 1.5rem;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 30px 60px rgba(24, 12, 5, 0.25);
+  backdrop-filter: blur(8px);
+}
+
+.page {
+  background: linear-gradient(135deg, #fffdf8 0%, #f4eadb 100%);
+  border: 1px solid rgba(60, 30, 15, 0.12);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.page__content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.page__number {
+  align-self: flex-end;
+  font-size: 0.85rem;
+  opacity: 0.6;
+}
+
+.page h2 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.page p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .reader {
+    padding: 2rem 1rem;
+  }
+}
